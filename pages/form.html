@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="../partials/form.css">
   
-      <title>Certificate Generator</title>
-        <style type='text/css'>
+
+  <style type='text/css'>
             body, html {
                 margin: 0;
                 padding: 0;
@@ -54,9 +59,38 @@
 /*               bottom: 100%; */
             }
         </style>
-    </head>
-    <body>
-        <div class="container" id="printDoc">
+
+</head>
+
+<body>
+
+  <section class="contact-us" id="contact-section">
+    <div id="contact">
+     
+      <div class="section-heading">
+        <h4>Fill Your Credentials</h4>
+      </div>
+
+      <div class="inputField">
+        <input type="text" id="name" placeholder="Your name"  required>
+        <span class="valid_info_name"></span>
+      </div>
+
+      <div class="inputField btn">
+<!--         <button onclick="window.location.href='certificate.html'"  id="form-submit" class="main-gradient-button" >Generate</button> -->
+        <button type="button" class="main-gradient-button" id="form-submit" onclick="myFunction()" id="genBtn">Generate</button>
+      </div>
+
+    </div>
+  </section>
+
+  <br>
+  <br>
+  <br>
+  
+  
+
+  <div class="container" id="printDoc">
             <div class="logo">
                 <h2>CodeQuest</h2>
             </div>
@@ -73,8 +107,8 @@
                 </h2>
             </div>
 
-            <div class="person">
-                <h1>Joe Nathan</h1>
+            <div class="person" id="prizeWin">
+                <h1></h1>
                 
             </div>
 
@@ -91,15 +125,16 @@
         <div class="printBtn">
           <button onclick="window.print()">Print</button>
         </div>
-        
-    </body>
-    <script >
-      function printDocument(documentId) {
-          var doc = document.getElementById(documentId); 
-          console.log("yes")
 
-          doc.print();
-      }
+
+
+</body>
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("name").value;
+        document.getElementById("prizeWin").innerHTML= x;
+    }
     </script>
-    <script src="partials/index.js"></script>
+
 </html>
