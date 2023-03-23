@@ -123,11 +123,15 @@ hr:after {
     line-height: 1.5;
 }
   
-.whatfor {
+.whatfor,.eyemy {
   width: 15%;
   height: auto;
   float: left;
   margin: 30px 80px auto 40px;
+}
+
+.eyemy {
+  margin: 10px 80px auto 40px;
 }
 footer{
     position: fixed;
